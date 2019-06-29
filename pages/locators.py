@@ -7,7 +7,7 @@ class BasePageLocators(object):
 
 
 class MainPageLocators(object):
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BASKET_LINK = (By.CSS_SELECTOR, '.btn-group > a[href$="/basket/"]')
 
 
 class LoginPageLocators:
@@ -27,3 +27,9 @@ class ProductPageLocators:
     ADD_MSG_CHECKOUT_LINK = (By.CSS_SELECTOR, '#messages a[href$="/checkout/"]')
 
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, '#messages .alert')
+    BASKET_LINK = (By.CSS_SELECTOR, '.btn-group > a[href$="/basket/"]')
+
+
+class CartPageLocators:
+    CART_PRODUCTS = (By.CSS_SELECTOR, '#basket_formset')
+    CART_EMPTY_MESSAGE = (By.CSS_SELECTOR, '#content_inner > p')
