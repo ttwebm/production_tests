@@ -33,7 +33,7 @@ class ProductPage(BasePage):
         price_total = self.browser.find_element(*PPL.ADD_MSG_CART_TOTAL_PRICE).text
         assert price_total == self.product_price, 'Wrong price product.'
 
-    def should_not_be_success_message_1(self):
+    def should_not_be_success_message(self):
         assert self.is_not_element_present(
                 *PPL.SUCCESS_MESSAGE
             ), "Success message is presented, but should not be"

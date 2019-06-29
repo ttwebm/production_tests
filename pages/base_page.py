@@ -68,3 +68,10 @@ class BasePage:
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    def should_be_authorized_user(self):
+        icon = WebDriverWait(self.browser, 5).until(
+            EC.presence_of_element_located(BPL.USER_ICON)
+        )
+        assert icon, "User icon is not presented," \
+            " probably unauthorised user"
